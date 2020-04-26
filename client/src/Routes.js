@@ -6,7 +6,7 @@ import {Main as MainLayout, Minimal as MinimalLayout} from './layouts';
 
 import {
     Dashboard as DashboardView,
-    ResourcesView as ResourcesView,
+    Resources as ResourcesView,
     UserList as UserListView,
     Testing as TestingView,
     Icons as IconsView,
@@ -26,6 +26,12 @@ const Routes = () => {
                 to="/dashboard"
             />
             <RouteWithLayout
+                component={DashboardView}
+                exact
+                layout={MainLayout}
+                path="/dashboard"
+            />
+            <RouteWithLayout
                 component={ResourcesView}
                 exact
                 layout={MainLayout}
@@ -37,13 +43,13 @@ const Routes = () => {
                 layout={MainLayout}
                 path="/testing"
             />
-
             <RouteWithLayout
-                component={DashboardView}
+                component={NotFoundView}
                 exact
-                layout={MainLayout}
-                path="/dashboard"
+                layout={MinimalLayout}
+                path="/not-found"
             />
+
             <RouteWithLayout
                 component={UserListView}
                 exact
@@ -85,12 +91,6 @@ const Routes = () => {
                 exact
                 layout={MinimalLayout}
                 path="/sign-in"
-            />
-            <RouteWithLayout
-                component={NotFoundView}
-                exact
-                layout={MinimalLayout}
-                path="/not-found"
             />
             <Redirect to="/not-found"/>
         </Switch>
