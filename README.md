@@ -1,4 +1,5 @@
 # No-Rona Antivirus
+Antivirus for Coronavirus! Helps users find resources for Coronavirus.
 
 ## Inspiration
 We wanted to develop an app that could help people during these tough times. With the help of public resources and API's, we were able to put together No-Rona Antivirus to help people find resources and get the help that they need.
