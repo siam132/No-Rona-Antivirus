@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(https://images.unsplash.com/photo-1519501025264-65ba15a82390)',
+    backgroundImage: 'url(https://www.washingtonpost.com/resizer/Bgmab4xbfUuzoOSQ7S4EgDlGM1s=/arc-anglerfish-washpost-prod-washpost/public/XGMWTRCUCEI6VEU2MTX2OSBKO4.jpg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -58,8 +58,11 @@ const useStyles = makeStyles(theme => ({
     flexBasis: '600px'
   },
   quoteText: {
-    color: theme.palette.white,
-    fontWeight: 300
+    color: 'black',
+    fontWeight: 300,
+    fontSize: '5em'
+
+
   },
   name: {
     marginTop: theme.spacing(3),

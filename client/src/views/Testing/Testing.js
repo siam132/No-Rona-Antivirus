@@ -21,7 +21,7 @@ class Testing extends React.Component {
 
   componentDidMount(){
 
-  let states = ['arizona','california','delaware','florida','new-york','new-jersey','florida','nevada','texas','utah','washington']
+  let states = ['arizona','california','delaware','florida','new-york','florida','nevada','texas','utah','washington']
  
   states.map(state=>{
   axios.get(`https://covid-19-testing.github.io/locations/${state}/complete.json`)
