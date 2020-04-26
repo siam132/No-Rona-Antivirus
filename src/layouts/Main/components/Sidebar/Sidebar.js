@@ -71,7 +71,7 @@ const Sidebar = props => {
     //   icon: <LockOpenIcon />
     // },
     // {
-    //   title: 'Typography',
+    //   title: 'Testing',
     //   href: '/typography',
     //   icon: <TextFieldsIcon />
     // },

@@ -48,7 +48,7 @@
 
 - Fixed charts responsiveness
 - Fixed `DisplayMode` component size, when used as a flex child it could grow/shrink
-- Fixed `Typography` view responsiveness for small devices
+- Fixed `Testing` view responsiveness for small devices
 - [#2](https://github.com/devias-io/react-material-dashboard/pull/2) Fixed `ProductCard` component description height
 
 ## [0.1.0] 2019-05-02

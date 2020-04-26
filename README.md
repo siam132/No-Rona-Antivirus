@@ -12,7 +12,7 @@
 - [Users Page](http://react-material-dashboard.devias.io/users?ref=github-readme)
 - [Products Page](http://react-material-dashboard.devias.io/products?ref=github-readme)
 - [Register Page](http://react-material-dashboard.devias.io/sign-up?ref=github-readme)
-- [Typography Page](http://react-material-dashboard.devias.io/typography?ref=github-readme)
+- [Testing Page](http://react-material-dashboard.devias.io/typography?ref=github-readme)
 - [Account Page](http://react-material-dashboard.devias.io/account?ref=github-readme)
 - [Settings Page](http://react-material-dashboard.devias.io/settings?ref=github-readme)
 
@@ -79,11 +79,11 @@ material-react-dashboard
 	│	├── Dashboard
 	│	├── Icons
 	│	├── NotFound
-	│	├── ProductList
+	│	├── Resources
 	│	├── Settings
 	│	├── SignIn
 	│	├── SignUp
-	│	├── Typography
+	│	├── Testing
 	│	└── UserList
 	├── App.jsx
 	├── index.jsx

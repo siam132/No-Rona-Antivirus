@@ -26,7 +26,7 @@ const variants = {
   button: 'Vivamus ultrices rutrum fames dictumst'
 };
 
-const Typography = () => {
+const Testing = () => {
   const classes = useStyles();
 
   return (
@@ -58,4 +58,4 @@ const Typography = () => {
   );
 };
 
-export default Typography;
+export default Testing;
