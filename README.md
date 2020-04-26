@@ -1,6 +1,9 @@
 # No-Rona Antivirus
 Antivirus for Coronavirus! Helps users find resources for Coronavirus.
 
+## Building
+Clone the project repository to your local computer and run `npm install` to install the dependencies. Next, run `npm run start` to start the development server. After the development server has started, navigate to localhost:3000 in your browser to use the web app.
+
 ## Inspiration
 We wanted to develop an app that could help people during these tough times. With the help of public resources and API's, we were able to put together No-Rona Antivirus to help people find resources and get the help that they need.
 
