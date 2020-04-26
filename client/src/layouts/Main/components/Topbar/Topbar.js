@@ -32,11 +32,13 @@ const Topbar = props => {
       className={clsx(classes.root, className)}
     >
       <Toolbar>
-        <RouterLink to="/resources">
+        <RouterLink to="/resources" className="text-danger">
         <img
           src="/images/applogo.png"
-          width="64px"
-          ></img> 
+          width="48px"
+          ></img>
+          &nbsp;
+          No-Rona Antivirus
         </RouterLink>
         <div className={classes.flexGrow} />
         <IconButton

@@ -24,11 +24,13 @@ const Topbar = props => {
       position="fixed"
     >
       <Toolbar>
-        <RouterLink to="/">
+        <RouterLink to="/" className="text-danger">
           <img
           src="/images/applogo.png"
-          width="64px"
+          width="48px"
           ></img>
+          &nbsp;
+          No-Rona Antivirus
         </RouterLink>
       </Toolbar>
     </AppBar>
