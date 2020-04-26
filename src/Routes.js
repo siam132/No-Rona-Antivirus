@@ -8,7 +8,7 @@ import {
     Dashboard as DashboardView,
     ResourcesView as ResourcesView,
     UserList as UserListView,
-    Typography as TypographyView,
+    Testing as TestingView,
     Icons as IconsView,
     Account as AccountView,
     Settings as SettingsView,
@@ -31,6 +31,12 @@ const Routes = () => {
                 layout={MainLayout}
                 path="/resources"
             />
+            <RouteWithLayout
+                component={TestingView}
+                exact
+                layout={MainLayout}
+                path="/testing"
+            />
 
             <RouteWithLayout
                 component={DashboardView}
@@ -49,12 +55,6 @@ const Routes = () => {
                 exact
                 layout={MainLayout}
                 path="/products"
-            />
-            <RouteWithLayout
-                component={TypographyView}
-                exact
-                layout={MainLayout}
-                path="/typography"
             />
             <RouteWithLayout
                 component={IconsView}
