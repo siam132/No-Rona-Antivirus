@@ -6,13 +6,7 @@ import { Divider, Drawer } from '@material-ui/core';
 // import DashboardIcon from '@material-ui/icons/Dashboard';
 import BookIcon from '@material-ui/icons/Book';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-// import PeopleIcon from '@material-ui/icons/People';
-// import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-// import TextFieldsIcon from '@material-ui/icons/TextFields';
-// import ImageIcon from '@material-ui/icons/Image';
-// import AccountBoxIcon from '@material-ui/icons/AccountBox';
-// import SettingsIcon from '@material-ui/icons/Settings';
-// import LockOpenIcon from '@material-ui/icons/LockOpen';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 import { Profile, SidebarNav } from './components';
 
@@ -44,7 +38,7 @@ const Sidebar = props => {
 
   const classes = useStyles();
 
-  const pages = [
+  const general = [
     {
       title: 'Resources',
       href: '/resources',
@@ -54,7 +48,15 @@ const Sidebar = props => {
       title: 'Get Tested',
       href: '/testing',
       icon: <LocalHospitalIcon />
-    }
+    },
+  ];
+
+  const other = [
+    {
+      title: 'Donate/Receive',
+      href: '/donate',
+      icon: <ShoppingBasketIcon />
+    },
   ];
 
   return (
@@ -71,9 +73,13 @@ const Sidebar = props => {
       >
         <SidebarNav
           className={classes.nav}
-          pages={pages}
+          pages={general}
         />
         <Divider className={classes.divider} />
+        <SidebarNav
+          className={classes.nav}
+          pages={other}
+        />
       </div>
     </Drawer>
   );

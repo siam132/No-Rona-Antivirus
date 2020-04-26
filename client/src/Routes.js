@@ -44,18 +44,18 @@ const Routes = () => {
                 path="/testing"
             />
             <RouteWithLayout
+                component={UserListView}
+                exact
+                layout={MainLayout}
+                path="/donate"
+            />
+            <RouteWithLayout
                 component={NotFoundView}
                 exact
                 layout={MinimalLayout}
                 path="/not-found"
             />
 
-            <RouteWithLayout
-                component={UserListView}
-                exact
-                layout={MainLayout}
-                path="/users"
-            />
             <RouteWithLayout
                 component={ResourcesView}
                 exact
