@@ -26,7 +26,7 @@ const Topbar = props => {
       <Toolbar>
         <RouterLink to="/" className="text-danger">
           <img
-          src="/images/applogo.png"
+          src="/images/app-logo.png"
           width="48px"
           ></img>
           &nbsp;
