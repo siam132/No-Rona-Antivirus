@@ -40,8 +40,7 @@ const Password = props => {
     >
       <form>
         <CardHeader
-          subheader="Update password"
-          title="Password"
+          title="Change Password"
         />
         <Divider />
         <CardContent>
@@ -69,7 +68,7 @@ const Password = props => {
         <CardActions>
           <Button
             color="primary"
-            variant="outlined"
+            variant="contained"
           >
             Update
           </Button>
