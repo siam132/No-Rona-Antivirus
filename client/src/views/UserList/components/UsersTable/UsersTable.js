@@ -103,7 +103,7 @@ const UsersTable = props => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell padding="checkbox">
+                  {/* <TableCell padding="checkbox">
                     <Checkbox
                       checked={selectedUsers.length === users.length}
                       color="primary"
@@ -113,12 +113,13 @@ const UsersTable = props => {
                       }
                       onChange={handleSelectAll}
                     />
-                  </TableCell>
+                  </TableCell> */}
+                  <TableCell>Item</TableCell>
                   <TableCell>Name</TableCell>
                   <TableCell>Email</TableCell>
                   <TableCell>Location</TableCell>
                   <TableCell>Phone</TableCell>
-                  <TableCell>Registration date</TableCell>
+                  {/* <TableCell>Registration date</TableCell> */}
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -129,14 +130,15 @@ const UsersTable = props => {
                     key={user.id}
                     selected={selectedUsers.indexOf(user.id) !== -1}
                   >
-                    <TableCell padding="checkbox">
+                    {/* <TableCell padding="checkbox">
                       <Checkbox
                         checked={selectedUsers.indexOf(user.id) !== -1}
                         color="primary"
                         onChange={event => handleSelectOne(event, user.id)}
                         value="true"
                       />
-                    </TableCell>
+                    </TableCell> */}
+                    <TableCell>{user.item}</TableCell>
                     <TableCell>
                       <div className={classes.nameContainer}>
                         <Avatar
@@ -154,9 +156,9 @@ const UsersTable = props => {
                       {user.address.country}
                     </TableCell>
                     <TableCell>{user.phone}</TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       {moment(user.createdAt).format('DD/MM/YYYY')}
-                    </TableCell>
+                    </TableCell> */}
                   </TableRow>
                 ))}
               </TableBody>
