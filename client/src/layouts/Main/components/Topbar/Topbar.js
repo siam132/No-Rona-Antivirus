@@ -33,9 +33,10 @@ const Topbar = props => {
     >
       <Toolbar>
         <RouterLink to="/resources">
-          <h2 className="text-danger">
-            HackDSC App
-          </h2>
+        <img
+          src="/images/applogo.png"
+          width="64px"
+          ></img>
         </RouterLink>
         <div className={classes.flexGrow} />
         <IconButton
