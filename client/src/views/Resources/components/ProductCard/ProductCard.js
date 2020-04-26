@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import {
+  Button,
   Card,
   CardContent,
   CardActions,
@@ -70,39 +71,18 @@ const ProductCard = props => {
         >
           {product.description}
         </Typography>
-      </CardContent>
-      <Divider />
-      <CardActions>
-        <Grid
-          container
-          justify="space-between"
+        <br/>
+
+          <Button
+          className={classes.buttons}
+          onClick={() => window.open(product.resourceUrl)}
+          size="large"
+          variant="contained"
+          color="secondary"
         >
-          <Grid
-            className={classes.statsItem}
-            item
-          >
-            <AccessTimeIcon className={classes.statsIcon} />
-            <Typography
-              display="inline"
-              variant="body2"
-            >
-              Updated 2hr ago
-            </Typography>
-          </Grid>
-          <Grid
-            className={classes.statsItem}
-            item
-          >
-            <GetAppIcon className={classes.statsIcon} />
-            <Typography
-              display="inline"
-              variant="body2"
-            >
-              {product.totalDownloads} Downloads
-            </Typography>
-          </Grid>
-        </Grid>
-      </CardActions>
+          Go to Resource
+        </Button>
+      </CardContent>
     </Card>
   );
 };
