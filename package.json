@@ -33,6 +33,7 @@
     "chart.js": "^2.8.0",
     "clsx": "^1.0.4",
     "firebase": "^7.14.2",
+    "firebaseui": "^4.5.0",
     "history": "^4.9.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
