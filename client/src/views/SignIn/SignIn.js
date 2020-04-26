@@ -6,12 +6,10 @@ import { makeStyles } from '@material-ui/styles';
 import {
   Grid,
   Button,
-  IconButton,
   TextField,
   Link,
   Typography
 } from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import { Facebook as FacebookIcon, Google as GoogleIcon } from 'icons';
 
@@ -172,7 +170,7 @@ const SignIn = props => {
 
   const handleSignIn = event => {
     event.preventDefault();
-    history.push('/');
+    history.push('/resources');
   };
 
   const hasError = field =>
@@ -223,9 +221,6 @@ const SignIn = props => {
         >
           <div className={classes.content}>
             <div className={classes.contentHeader}>
-              <IconButton onClick={handleBack}>
-                <ArrowBackIcon />
-              </IconButton>
             </div>
             <div className={classes.contentBody}>
               <form
@@ -237,12 +232,6 @@ const SignIn = props => {
                   variant="h2"
                 >
                   Sign in
-                </Typography>
-                <Typography
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  Sign in with social media
                 </Typography>
                 <Grid
                   className={classes.socialButtons}

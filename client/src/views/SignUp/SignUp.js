@@ -187,7 +187,7 @@ const SignUp = props => {
 
   const handleSignUp = event => {
     event.preventDefault();
-    history.push('/');
+    history.push('/resources');
   };
 
   const hasError = field =>

@@ -23,7 +23,7 @@ const Routes = () => {
             <Redirect
                 exact
                 from="/"
-                to="/resources"
+                to="/sign-in"
             />
             <RouteWithLayout
                 component={ResourcesView}
