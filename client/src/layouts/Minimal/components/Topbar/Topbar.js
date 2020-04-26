@@ -25,10 +25,9 @@ const Topbar = props => {
     >
       <Toolbar>
         <RouterLink to="/">
-          <img
-            alt="Logo"
-            src="/images/logos/logo--white.svg"
-          />
+          <h2>
+            HackDSC App
+          </h2>
         </RouterLink>
       </Toolbar>
     </AppBar>
