@@ -36,7 +36,7 @@ const Topbar = props => {
         <img
           src="/images/applogo.png"
           width="64px"
-          ></img>
+          ></img> 
         </RouterLink>
         <div className={classes.flexGrow} />
         <IconButton
