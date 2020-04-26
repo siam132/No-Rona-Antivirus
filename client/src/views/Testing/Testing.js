@@ -20,16 +20,24 @@ class Testing extends React.Component {
   }
 
   componentDidMount(){
-    axios.get('https://covid-19-testing.github.io/locations/new-york/complete.json')
-    .then(response=> {
-      this.setState({testingLoc:response.data})
-     // console.log(this.state.testingLoc)
-      this.fillAddress()
-      
-    }).catch(error=> 
-      console.log(error))
 
-      // console.log(this.state.pureCords)
+  let states = ['arizona','california','delaware','florida','new-york','new-jersey','florida','nevada','texas','utah','washington']
+ 
+  states.map(state=>{
+  axios.get(`https://covid-19-testing.github.io/locations/${state}/complete.json`)
+  .then(response=> {
+    this.setState({testingLoc:response.data})
+   // console.log(this.state.testingLoc)
+    this.fillAddress()
+    
+  }).catch(error=> 
+    console.log(error))
+
+    // console.log(this.state.pureCords)
+
+
+})
+   
   
   }
 
@@ -50,7 +58,6 @@ class Testing extends React.Component {
   cordBuilder(param){
    
     this.setState({pureCords: this.state.pureCords.concat({lat: param.results[0].geometry.location.lat, long:param.results[0].geometry.location.lng})})
-    //console.log(this.state.pureCords)
   }
 
   
@@ -63,13 +70,15 @@ class Testing extends React.Component {
         container
         spacing={6}
       >
-        <div className="m-5">
-         
-       <MapContainer  cords={this.state.pureCords}/>
-        
        
-        </div>
-
+        <div className="m-5">
+       
+        <div class="col-md-auto">
+        <h1 className="row justify-content-md-center">Testing sites</h1>
+    </div>
+       <MapContainer  cords={this.state.pureCords}/>
+    </div>
+    
       </Grid>
 
      

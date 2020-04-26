@@ -13,7 +13,7 @@ export default [
     email: 'ekaterina.tankova@devias.io',
     phone: '304-428-3097',
     avatarUrl: '/images/avatars/avatar_3.png',
-    item: '1 Face Mask',
+    item: '50 Face Mask',
     createdAt: 1555016400000
   },
   {
@@ -28,7 +28,7 @@ export default [
     email: 'cao.yu@devias.io',
     avatarUrl: '/images/avatars/avatar_4.png',
     phone: '712-351-5711',
-    item: '1 Face Mask',
+    item: '5 PPE',
     createdAt: 1555016400000
   },
   {
@@ -43,7 +43,7 @@ export default [
     email: 'alexa.richardson@devias.io',
     phone: '770-635-2682',
     avatarUrl: '/images/avatars/avatar_2.png',
-    item: '1 Face Mask',
+    item: '10 Meal pack',
     createdAt: 1555016400000
   },
   {
@@ -58,7 +58,7 @@ export default [
     email: 'anje.keizer@devias.io',
     avatarUrl: '/images/avatars/avatar_5.png',
     phone: '908-691-3242',
-    item: '1 Face Mask',
+    item: '15 Face Mask',
     createdAt: 1554930000000
   },
   {
@@ -73,7 +73,7 @@ export default [
     email: 'clarke.gillebert@devias.io',
     phone: '972-333-4106',
     avatarUrl: '/images/avatars/avatar_6.png',
-    item: '1 Face Mask',
+    item: '30 Hand Knitted Face Mask',
     createdAt: 1554757200000
   },
   {
@@ -88,7 +88,7 @@ export default [
     email: 'adam.denisov@devias.io',
     phone: '858-602-3409',
     avatarUrl: '/images/avatars/avatar_1.png',
-    item: '1 Face Mask',
+    item: '3D printed PPE',
     createdAt: 1554670800000
   },
   {
@@ -103,7 +103,7 @@ export default [
     email: 'ava.gregoraci@devias.io',
     avatarUrl: '/images/avatars/avatar_7.png',
     phone: '415-907-2647',
-    item: '1 Face Mask',
+    item: '6 3D printers',
     createdAt: 1554325200000
   },
   {
@@ -118,7 +118,7 @@ export default [
     email: 'emilee.simchenko@devias.io',
     phone: '702-661-1654',
     avatarUrl: '/images/avatars/avatar_8.png',
-    item: '1 Face Mask',
+    item: '100 Face Mask',
     createdAt: 1523048400000
   },
   {
@@ -132,7 +132,7 @@ export default [
     },
     email: 'kwak.seong.min@devias.io',
     avatarUrl: '/images/avatars/avatar_9.png',
-    item: '1 Face Mask',
+    item: 'Hand sanitizer',
     phone: '313-812-8947'
   },
   {
@@ -147,7 +147,7 @@ export default [
     email: 'merrile.burgett@devias.io',
     phone: '801-301-7894',
     avatarUrl: '/images/avatars/avatar_10.png',
-    item: '1 Face Mask',
+    item: '325 Face Mask',
     createdAt: 1522702800000
   }
 ];

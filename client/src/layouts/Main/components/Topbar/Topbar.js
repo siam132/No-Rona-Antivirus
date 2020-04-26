@@ -32,7 +32,7 @@ const Topbar = props => {
     >
       <Toolbar>
         <RouterLink to="/resources">
-          <h2>
+          <h2 className="text-danger">
             HackDSC App
           </h2>
         </RouterLink>

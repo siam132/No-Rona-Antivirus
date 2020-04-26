@@ -138,7 +138,7 @@ const UsersTable = props => {
                         value="true"
                       />
                     </TableCell> */}
-                    <TableCell>{user.item}</TableCell>
+                    <TableCell><span className=" h1 p-3 badge badge-warning">{user.item}</span></TableCell>
                     <TableCell>
                       <div className={classes.nameContainer}>
                         <Avatar
