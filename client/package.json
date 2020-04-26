@@ -30,19 +30,11 @@
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
-<<<<<<< HEAD:package.json
-    "axios": "^0.19.2",
-=======
->>>>>>> 0d704662306f0ce73aeaa9542d0e7379d96198b3:client/package.json
     "bootstrap": "^4.4.1",
     "chart.js": "^2.8.0",
     "clsx": "^1.0.4",
     "firebase": "^7.14.2",
-<<<<<<< HEAD:package.json
-    "google-maps-react": "^2.0.6",
-=======
     "firebaseui": "^4.5.0",
->>>>>>> 0d704662306f0ce73aeaa9542d0e7379d96198b3:client/package.json
     "history": "^4.9.0",
     "jquery": "^3.5.0",
     "moment": "^2.24.0",
