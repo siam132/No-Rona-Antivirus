@@ -44,19 +44,6 @@ const Routes = () => {
                 path="/donate"
             />
             <RouteWithLayout
-                component={NotFoundView}
-                exact
-                layout={MinimalLayout}
-                path="/not-found"
-            />
-
-            <RouteWithLayout
-                component={IconsView}
-                exact
-                layout={MainLayout}
-                path="/icons"
-            />
-            <RouteWithLayout
                 component={AccountView}
                 exact
                 layout={MainLayout}
@@ -79,6 +66,12 @@ const Routes = () => {
                 exact
                 layout={MinimalLayout}
                 path="/sign-in"
+            />
+            <RouteWithLayout
+                component={NotFoundView}
+                exact
+                layout={MinimalLayout}
+                path="/not-found"
             />
             <Redirect to="/not-found"/>
         </Switch>
