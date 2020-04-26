@@ -1,3 +1,3 @@
-# HackDSC App
+# No-Rona Antivirus
 
-Project for HackDSC.
+HackDSC hackathon project.
