@@ -23,13 +23,7 @@ const Routes = () => {
             <Redirect
                 exact
                 from="/"
-                to="/dashboard"
-            />
-            <RouteWithLayout
-                component={DashboardView}
-                exact
-                layout={MainLayout}
-                path="/dashboard"
+                to="/sign-in"
             />
             <RouteWithLayout
                 component={ResourcesView}
@@ -56,12 +50,6 @@ const Routes = () => {
                 path="/not-found"
             />
 
-            <RouteWithLayout
-                component={ResourcesView}
-                exact
-                layout={MainLayout}
-                path="/products"
-            />
             <RouteWithLayout
                 component={IconsView}
                 exact
