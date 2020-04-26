@@ -1,61 +1,81 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Grid, Typography as MuiTypography } from '@material-ui/core';
+import MapContainer from './MapComponent'
+import axios from 'axios'; 
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(4)
+
+
+
+class Testing extends React.Component {
+ 
+  constructor(props){
+    super(props)
+    this.state={
+      testingLoc : [],
+      addresses: [],
+      cords: [],
+      pureCords: []
+    }
   }
-}));
 
-const variants = {
-  h1: 'Nisi euismod ante senectus consequat phasellus ut',
-  h2: 'Nisi euismod ante senectus consequat phasellus ut',
-  h3: 'Nisi euismod ante senectus consequat phasellus ut',
-  h4: 'Nisi euismod ante senectus consequat phasellus ut',
-  h5: 'Nisi euismod ante senectus consequat phasellus ut',
-  h6: 'Nisi euismod ante senectus consequat phasellus ut',
-  subtitle1: 'Leo varius justo aptent arcu urna felis pede nisl',
-  subtitle2: 'Leo varius justo aptent arcu urna felis pede nisl',
-  body1:
-    'Justo proin curabitur dictumst semper auctor, consequat tempor, nostra aenean neque turpis nunc. Leo. Sapien aliquet facilisi turpis, elit facilisi praesent porta metus leo. Dignissim amet dis nec ac integer inceptos erat dis Turpis sodales ad torquent. Dolor, erat convallis.Laoreet velit a fames commodo tristique hendrerit sociosqu rhoncus vel sapien penatibus facilisis faucibus ad. Mus purus vehicula imperdiet tempor lectus, feugiat Sapien erat viverra netus potenti mattis purus turpis. Interdum curabitur potenti tristique. Porta velit dignissim tristique ultrices primis.',
-  body2:
-    'Justo proin curabitur dictumst semper auctor, consequat tempor, nostra aenean neque turpis nunc. Leo. Sapien aliquet facilisi turpis, elit facilisi praesent porta metus leo. Dignissim amet dis nec ac integer inceptos erat dis Turpis sodales ad torquent. Dolor, erat convallis.',
-  caption: 'Accumsan leo pretium conubia ullamcorper.',
-  overline: 'Accumsan leo pretium conubia ullamcorper.',
-  button: 'Vivamus ultrices rutrum fames dictumst'
-};
+  componentDidMount(){
+    axios.get('https://covid-19-testing.github.io/locations/new-york/complete.json')
+    .then(response=> {
+      this.setState({testingLoc:response.data})
+     // console.log(this.state.testingLoc)
+      this.fillAddress()
+      
+    }).catch(error=> 
+      console.log(error))
 
-const Testing = () => {
-  const classes = useStyles();
+      // console.log(this.state.pureCords)
+  
+  }
 
+  fillAddress (){
+    let address = this.state.testingLoc.map(e=>{ 
+      const regex = / /gi;
+      let temp = e.physical_address[0].address_1.replace(regex,'+')
+      axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${temp}&key=AIzaSyAgt1C9Qf7Lts4n67FVboQ4KZpKVlJCpTY`)
+      .then(response=>{
+         
+         this.cordBuilder(response.data)
+         this.setState({cords: this.state.cords.concat(response.data)})
+      }).catch(error=> console.log(error))
+    return temp})
+
+  }
+
+  cordBuilder(param){
+   
+    this.setState({pureCords: this.state.pureCords.concat({lat: param.results[0].geometry.location.lat, long:param.results[0].geometry.location.lng})})
+    //console.log(this.state.pureCords)
+  }
+
+  
+
+  render(){
+   
   return (
-    <div className={classes.root}>
+    <div className="container">
       <Grid
         container
-        spacing={4}
+        spacing={6}
       >
-        {Object.keys(variants).map((key, i) => (
-          <Fragment key={i}>
-            <Grid
-              item
-              sm={3}
-              xs={12}
-            >
-              <MuiTypography variant="caption">{key}</MuiTypography>
-            </Grid>
-            <Grid
-              item
-              sm={9}
-              xs={12}
-            >
-              <MuiTypography variant={key}>{variants[key]}</MuiTypography>
-            </Grid>
-          </Fragment>
-        ))}
+        <div className="m-5">
+         
+       <MapContainer  cords={this.state.pureCords}/>
+        
+       
+        </div>
+
       </Grid>
+
+     
+    
     </div>
   );
-};
+}};
 
 export default Testing;
