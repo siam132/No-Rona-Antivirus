@@ -4,7 +4,7 @@ Antivirus for Coronavirus! Helps users find resources for Coronavirus.
 
 ## Building
 
-- Clone the project repository to your local computer and run `npm install` to install the dependencies.
+- Clone the project repository to your local computer, navigate to the `client` folder, and run `npm install` to install the dependencies.
 - Next, run `npm run start` to start the development server.
 - After the development server has started, navigate to `localhost:3000` in your browser to use the web app.
 
