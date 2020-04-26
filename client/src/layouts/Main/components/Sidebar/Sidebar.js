@@ -2,13 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import { Divider, Drawer } from '@material-ui/core';
+import { Drawer } from '@material-ui/core';
 // import DashboardIcon from '@material-ui/icons/Dashboard';
 import BookIcon from '@material-ui/icons/Book';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
-import { Profile, SidebarNav } from './components';
+import { SidebarNav } from './components';
 
 const useStyles = makeStyles(theme => ({
   drawer: {
@@ -49,9 +49,6 @@ const Sidebar = props => {
       href: '/testing',
       icon: <LocalHospitalIcon />
     },
-  ];
-
-  const other = [
     {
       title: 'Donate/Receive',
       href: '/donate',
@@ -74,11 +71,6 @@ const Sidebar = props => {
         <SidebarNav
           className={classes.nav}
           pages={general}
-        />
-        <Divider className={classes.divider} />
-        <SidebarNav
-          className={classes.nav}
-          pages={other}
         />
       </div>
     </Drawer>
